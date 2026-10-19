@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Registration | Gamers Corner</title>
+<link rel="stylesheet" href="Home_Doc.css">
+</head>
+<body>
+<header><h1>Gamers Corner</h1><p>Top of the line tech · Tournaments · Community</p></header>
+<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="ListTypes.html">Equipment</a><a href="HeadLines.html">Visit &amp; Hours</a><a href="Customer.html" aria-current="page">Customer Registration</a></nav>
+<main>
+<section class="page-intro"><p class="eyebrow">Join the community</p><h2>Customer Registration</h2><p>Tell us a little about yourself and what you like to play.</p></section>
+<div class="form-layout">
+<form class="signup-form panel" id="signup" novalidate="">
+<h2>Create a Customer Account</h2>
+<p class="form-note">This is a class-project demonstration. Information is not sent to a server or saved.</p>
+<div class="form-row">
+<div class="field"><label for="first-name">First name <span aria-hidden="true">*</span></label><input type="text" id="first-name" name="firstName" autocomplete="given-name" placeholder="Alex" required></div>
+<div class="field"><label for="last-name">Last name <span aria-hidden="true">*</span></label><input type="text" id="last-name" name="lastName" autocomplete="family-name" placeholder="Gamer" required></div>
+</div>
+<div class="field"><label for="email">Email address <span aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" placeholder="alex@example.com" required></div>
+<div class="field"><label for="password">Choose a password <span aria-hidden="true">*</span></label><input type="password" id="password" name="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required><small class="help-text">Demo only. Don't enter a password you use anywhere else.</small></div>
+<h2>Location &amp; Preferences</h2>
+<div class="form-row">
+<div class="field"><label for="state">State</label><input type="text" id="state" name="state" autocomplete="address-level1" value="New Jersey"></div>
+<div class="field"><label for="country">Country</label><input type="text" id="country" name="country" autocomplete="country-name" value="United States"></div>
+</div>
+<div class="field"><label for="favorite-game">Favorite game or genre</label><input id="favorite-game" name="favoriteGame" list="game-options" placeholder="Start typing a game or genre"><datalist id="game-options"><option value="Valorant"><option value="Minecraft"><option value="Fortnite"><option value="Call of Duty"><option value="Rocket League"><option value="Overwatch"><option value="Strategy Games"><option value="Racing Games"></datalist><small class="help-text">Choose a suggestion or type your own answer.</small></div>
+<fieldset class="interests"><legend>What are you interested in?</legend><label class="check-label"><input type="checkbox" name="interest" value="tournaments">Gaming tournaments</label><label class="check-label"><input type="checkbox" name="interest" value="equipment">Gaming equipment</label><label class="check-label"><input type="checkbox" name="interest" value="community">Community game nights</label></fieldset>
+<div class="field"><label for="feedback">Questions or suggestions</label><textarea id="feedback" name="feedback" rows="4" placeholder="What would you like to see at Gamers Corner?"></textarea></div>
+<button class="button submit-button" type="submit">Preview Registration</button>
+<p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+</form>
+<aside class="panel aside-panel"><h2>Why join?</h2><p>Gamers Corner is a place for game nights, friendly competition, and meeting other players.</p><ul><li>Connect with local gamers</li><li>Get involved with tournaments</li><li>Tell us what events you want</li></ul><p><strong>Note:</strong> This form is a demonstration for our web development lab; no real account is created.</p></aside>
+</div>
+</main>
+<footer><div class="footer-inner"><div><strong>Gamers Corner</strong><p>123 Rowan Ave, Glassboro, NJ</p><p><a href="tel:+17324311212">732-431-1212</a> · <a href="mailto:Gamers@corner.com">Gamers@corner.com</a></p></div><div><strong>Connect</strong><p><a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> <a class="social" href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer">Twitch</a></p></div></div><small>© 2026 Gamers Corner · Site created by Joseph Lombardo</small></footer>
+<script>
+const form = document.querySelector('#signup');
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const msg = document.querySelector('#form-message');
+  if (!form.checkValidity()) {
+    msg.textContent = 'Please check the required fields and enter a valid email and password length.';
+    form.reportValidity();
+    return;
+  }
+  msg.textContent = 'Form preview complete! This sample website does not save, transmit, or create accounts.';
+  form.reset();
+});
+</script>
+</body>
+</html>

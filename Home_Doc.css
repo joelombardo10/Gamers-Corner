@@ -1,0 +1,28 @@
+*{box-sizing:border-box}html{font-family:Arial,Helvetica,sans-serif;color:#f3f0ff;background:#10101b}body{margin:0;line-height:1.6}header{text-align:center;padding:28px 16px;background:#21183a}h1{margin:0;font-size:2.2rem}header p{margin:4px 0 0;color:#c6bbeb}nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px;background:#30204c}nav a{color:#fff;text-decoration:none;padding:8px 18px;border-radius:6px}nav a:hover,nav a:focus-visible,nav a[aria-current=page]{background:#6952b9}main{max-width:1100px;margin:auto;padding:32px 20px 54px}.hero{position:relative;border-radius:14px;overflow:hidden;background:#201b33}.hero img{display:block;width:100%;max-height:470px;object-fit:cover}.hero-copy{padding:24px 30px;background:#21183a}.hero-copy h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;margin:6px 0}.eyebrow{text-transform:uppercase;letter-spacing:.15em;color:#bfaaff;font-size:.8rem;font-weight:bold}.button{display:inline-block;background:#9b75f5;color:#12101d;text-decoration:none;font-weight:bold;border-radius:6px;padding:10px 18px;margin-top:8px}.button:hover,.button:focus-visible{background:#c2a8ff}.panel,.card{background:#211e33;border:1px solid #40375a;border-radius:12px;padding:24px}.panel{margin-top:26px}.panel h2,.card h3{margin-top:0}.page-intro{margin-bottom:26px}.page-intro h2{font-size:2rem;margin:0}.page-intro p:last-child{color:#d3cde5}.equipment-grid,.hours-grid{display:flex;gap:18px;align-items:stretch;flex-wrap:wrap}.equipment-grid .card,.hours-grid .card{flex:1 1 280px;min-width:0}.card h3{color:#c4acff}.card ul{padding:0;list-style:none;margin:0}.card li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid #40375a}.card li strong{white-space:nowrap;color:#e1d3ff}.video{aspect-ratio:16/9;max-width:800px}.video iframe{width:100%;height:100%;border:0;border-radius:8px}.map{width:100%;height:360px;border:0;border-radius:8px}table{width:100%;border-collapse:collapse;text-align:left}caption{text-align:left;color:#cbc3dc;margin-bottom:8px}th,td{padding:8px 5px;border-bottom:1px solid #40375a}td{text-align:right;white-space:nowrap}thead{color:#bfaaff}footer{background:#21183a;padding:28px 20px;text-align:center}.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:24px;text-align:left;flex-wrap:wrap}footer p{margin:4px 0}footer a{color:#d5c4ff}.social{display:inline-block;border:1px solid #8e78bd;border-radius:6px;padding:5px 10px;margin:4px 6px 4px 0;text-decoration:none}footer small{display:block;margin-top:24px;color:#c6bbeb}@media(max-width:650px){.footer-inner{display:block}.footer-inner>div+div{margin-top:18px}main{padding:20px 14px 36px}.card,.panel{padding:18px}}
+.promo-video{display:block;width:100%;max-width:800px;aspect-ratio:16/9;background:#111;border-radius:8px}
+
+
+/* Lab 2: accessible forms and responsive design */
+.form-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(230px,1fr);gap:24px;align-items:start}
+.form-layout .panel{margin-top:0}
+.signup-form h2:not(:first-child){margin-top:28px;padding-top:18px;border-top:1px solid #40375a}
+.form-note,.help-text{color:#c8bddf}
+.form-note{margin-top:-8px;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field{margin-bottom:18px;min-width:0}
+.field label{display:block;margin-bottom:6px;font-weight:600}
+.field input,.field textarea{width:100%;padding:12px;background:#121126;color:#fff;border:1px solid #71668c;border-radius:8px;font:inherit;min-width:0}
+.field input::placeholder,.field textarea::placeholder{color:#afa5c4}
+.field input:focus-visible,.field textarea:focus-visible{outline:3px solid #aa8fff;outline-offset:1px}
+.field small{display:block;font-size:.82rem;margin-top:4px}
+fieldset.interests{border:1px solid #5a5070;border-radius:8px;margin:0 0 20px;padding:12px 16px}
+fieldset.interests legend{padding:0 6px;font-weight:600}
+.check-label{display:flex;align-items:center;gap:8px;margin:8px 0}
+.check-label input{width:17px;height:17px;accent-color:#aa8fff}
+.submit-button{border:0;cursor:pointer;font:inherit}
+.form-message{margin-bottom:0;color:#d9c9ff;min-height:1.5em;font-weight:600}
+.aside-panel ul{padding-left:20px}
+.aside-panel li{margin-bottom:10px}
+.site-credit{font-size:.78rem;margin-top:16px;color:#c6bbeb}
+@media(max-width:740px){.form-layout{grid-template-columns:1fr}.aside-panel{order:2}}
+@media(max-width:480px){header{padding:20px 12px}header h1{font-size:1.7rem}nav{gap:5px;padding:8px}nav a{padding:8px 10px;font-size:.88rem}.form-row{grid-template-columns:1fr}.hero-copy{padding:18px}.page-intro h2{font-size:1.65rem}.map{height:280px}}
